@@ -3,17 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="styles-copy.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Jessica McColpin | Technical Writing Portfolio</title>
+    <script>
+      window.onload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
   </head>
   <body>
     <header>
-      <h1>Jessica McColpin</h1>
+      <h1 id="name-header">Jessica McColpin</h1>
       <nav>
-        <a href="#bio">Bio</a>
-        <a href="#quickstart">Quickstart Guide</a>
-        <a href="#sop">SOP</a>
-        <a href="#tech-guide">Troubleshooting Guide</a>
+        <a class="nav-link" href="#bio">Bio</a>
+        <a class="nav-link" href="#quickstart">Quickstart Guide</a>
+        <a class="nav-link" href="#sop">SOP</a>
+        <a class="nav-link" href="#tech-guide">Troubleshooting Guide</a>
       </nav>
     </header>
     <main>
@@ -36,20 +48,19 @@
         </p>
       </section>
       <section id="quickstart">
-        <h2>Quickstart Guide for Bose Headphones</h2>
+        <h2>Quick Start Guide for Bose Headphones</h2>
         <!-- include the bit about Figma -->
         <p>
           I own the Bose QuietComfort Ultra headphones and noticed they don't
-          come with a quickstart guide. So I made one. This unofficial guide
+          come with a quick start guide. So I made one. This unofficial guide
           covers everything a new user needs to start listening, including a
           labeled diagram of the headphone's buttons and a few common
           troubleshooting scenarios.
         </p>
         <div class="pdf-viewer">
           <iframe
-            src="pdfs/quickstart-guide.pdf"
             title="Quickstart Guide for Bose Headphones"
-            style="width: 70vw; height: 600px"
+            src="pdfs/quickstart-guide.pdf#navpanes=0"
           >
             <p>Your browser can not display this content.</p></iframe
           >
@@ -66,9 +77,8 @@
         </p>
         <div class="pdf-viewer">
           <iframe
-            src="pdfs/gmp-sop.pdf"
             title="SOP for Filing Documents in a GMP Library"
-            style="width: 70vw; height: 600px"
+            src="pdfs/gmp-sop.pdf#navpanes=0"
           >
             <p>Your browser can not display this content.</p></iframe
           >
@@ -85,9 +95,8 @@
         </p>
         <div class="pdf-viewer">
           <iframe
-            src="pdfs/tech-support.pdf"
             title="Tier 1 Tech Support Guide"
-            style="width: 70vw; height: 600px"
+            src="pdfs/tech-support.pdf#navpanes=0"
           >
             <p>Your browser can not display this content.</p></iframe
           >
