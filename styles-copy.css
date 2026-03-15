@@ -2,7 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f5f2ee;
+  /* background-color: #f5f2ee; */
+  background-color: #fcfaf5;
+  font-family: "Special Gothic", sans-serif;
 }
 header {
   display: flex;
@@ -13,6 +15,7 @@ header {
   margin: 0 auto;
   padding-bottom: 1.5rem;
   border-radius: 30px;
+  box-shadow: 0px 4px 12px rgba(158, 158, 158, 0.277);
 }
 main {
   display: flex;
@@ -29,20 +32,21 @@ iframe {
   width: 100%;
 }
 #name-header {
-  color: #3d2c5e;
+  color: #2c2420;
   font-family: "Special Gothic", sans-serif;
   letter-spacing: 0.01em;
   text-shadow: 2px 2px 4px rgba(174, 174, 174, 0.493);
 }
 .nav-link {
   font-family: "Special Gothic", sans-serif;
-  color: #6b3fa0;
+  /* color: #6b3fa0; */
+  color: #3d2c5e;
   text-decoration: none;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(174, 174, 174, 0.493);
 }
 .nav-link:hover {
-  color: #9b6fd4;
+  color: #5f2f9d;
 }
 nav {
   display: flex;
