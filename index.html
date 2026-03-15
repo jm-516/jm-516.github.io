@@ -8,13 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Special+Gothic:wght@400..700&display=swap"
       rel="stylesheet"
     />
     <title>Jessica McColpin | Technical Writing Portfolio</title>
-    <script>
+    <!-- <script>
       window.onload = function () {
         window.scrollTo(0, 0);
+      };
+    </script> -->
+    <script>
+      window.onload = function () {
+        window.scrollTo({ top: 0, behavior: "instant" });
       };
     </script>
   </head>
@@ -57,12 +62,18 @@
           labeled diagram of the headphone's buttons and a few common
           troubleshooting scenarios.
         </p>
+        <a class="download-pdf" href="pdfs/quickstart-guide.pdf" download
+          >Download PDF</a
+        >
         <div class="pdf-viewer">
           <iframe
             title="Quickstart Guide for Bose Headphones"
             src="pdfs/quickstart-guide.pdf#navpanes=0"
           >
-            <p>Your browser can not display this content.</p></iframe
+            <p>Your browser can not display this content.</p>
+            <a href="pdfs/quickstart-guide.pdf" download
+              >Download PDF</a
+            ></iframe
           >
         </div>
       </section>
@@ -75,12 +86,16 @@
           documentation I work with daily — though names and identifying details
           have been changed or omitted.
         </p>
+        <a class="download-pdf" href="pdfs/gmp-sop.pdf" download
+          >Download PDF</a
+        >
         <div class="pdf-viewer">
           <iframe
             title="SOP for Filing Documents in a GMP Library"
             src="pdfs/gmp-sop.pdf#navpanes=0"
           >
-            <p>Your browser can not display this content.</p></iframe
+            <p>Your browser can not display this content.</p>
+            <a href="pdfs/gmp-sop.pdf" download>Download PDF</a></iframe
           >
         </div>
       </section>
@@ -93,16 +108,57 @@
           than IT professionals, keeping the language accessible without
           oversimplifying.
         </p>
+        <a class="download-pdf" href="pdfs/tech-support.pdf" download
+          >Download PDF</a
+        >
         <div class="pdf-viewer">
           <iframe
             title="Tier 1 Tech Support Guide"
             src="pdfs/tech-support.pdf#navpanes=0"
           >
-            <p>Your browser can not display this content.</p></iframe
+            <p>Your browser can not display this content.</p>
+            <a href="pdfs/tech-support.pdf" download>Download PDF</a></iframe
           >
         </div>
       </section>
     </main>
-    <footer></footer>
+    
+    <footer>
+      <!-- mail icon -->
+      <a href="mailto:mcco.jessica@gmail.com" aria-label="Send an email""></a>
+        <svg?
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="feather feather-mail"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path
+            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+          ></path>
+          <polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+
+      <!-- linkedin icon -->
+      <a href="https://www.linkedin.com/in/jessica-mccolpin/" aria-label="Visit LinkedIn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="feather feather-linkedin"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path
+            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+          ></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+    </footer>
   </body>
 </html>
