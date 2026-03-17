@@ -1,56 +1,79 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 body {
   background-color: #fcfaf5;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  /* overflow-anchor: none; */
+  color: #2c2420;
+  padding-top: 1.5rem;
 }
+
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #e0dbd3;
   width: 95vw;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 30px;
   box-shadow: 0px 4px 12px rgba(158, 158, 158, 0.155);
-  /* overflow: hidden; */
 }
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 65vw;
+  width: 90%;
+  max-width: 800px;
   margin: 0 auto;
 }
+
 section {
   width: 100%;
   padding: 2rem 0;
   border-bottom: 1px solid #e0dbd3;
 }
+
 h2 {
   color: #3b1d62;
   font-family: "Special Gothic", sans-serif;
   font-weight: 500;
 }
+
 iframe {
   height: 600px;
   width: 90%;
   margin-top: 1rem;
 }
+
 #name-header {
   color: hsl(20, 15%, 12%);
   font-family: "Special Gothic", sans-serif;
   letter-spacing: 0.01em;
   text-shadow: 6px 0 9px rgba(174, 174, 174, 0.5);
 }
+
 .nav-link {
   font-family: "Special Gothic", sans-serif;
   color: #3b1d62;
@@ -58,10 +81,20 @@ iframe {
   font-weight: 600;
   text-shadow: 6px 0 9px rgba(174, 174, 174, 0.5);
   transition: color 0.15s linear;
+  padding: 0.25rem 0;
 }
-.nav-link:hover {
+
+.nav-link:hover,
+.nav-link:focus-visible {
   color: #5f2f9d;
 }
+
+.nav-link:focus-visible {
+  outline: 2px solid #5f2f9d;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 nav {
   display: flex;
   gap: 2rem;
@@ -70,7 +103,6 @@ nav {
 }
 
 p {
-  font-family: "Inter", sans-serif;
   color: #2c2420;
 }
 
@@ -78,21 +110,28 @@ p {
   color: #5f2f9d;
   font-family: "Special Gothic", sans-serif;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.15s linear;
 }
 
-.download-pdf:hover {
+.download-pdf:hover,
+.download-pdf:focus-visible {
   color: #8c4eca;
 }
+
+.download-pdf:focus-visible {
+  outline: 2px solid #5f2f9d;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 footer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
+  margin: 2rem 1rem;
 }
 
 svg {
@@ -104,12 +143,20 @@ svg {
 footer a {
   color: hsl(20, 15%, 12%);
   transition: color 0.15s linear;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
-footer a:hover {
+
+footer a:hover,
+footer a:focus-visible {
   color: #5f2f9d;
 }
 
-/* smaller screens - not mobile */
+footer a:focus-visible {
+  outline: 2px solid #5f2f9d;
+  outline-offset: 4px;
+}
+
 @media (max-width: 800px) {
   iframe {
     height: 400px;
@@ -120,9 +167,11 @@ footer a:hover {
   }
 }
 
-/* mobile */
 @media (max-width: 480px) {
   iframe {
     display: none;
+  }
+  main {
+    width: 90%;
   }
 }
