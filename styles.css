@@ -4,12 +4,24 @@
 html {
   scroll-behavior: smooth;
 }
+/* accesibility code for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
 body {
   background-color: #fcfaf5;
+  color: #2c2420;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  /* overflow-anchor: none; */
 }
 header {
   display: flex;
@@ -21,7 +33,7 @@ header {
   padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 30px;
   box-shadow: 0px 4px 12px rgba(158, 158, 158, 0.155);
-  /* overflow: hidden; */
+  max-width: 1400px;
 }
 main {
   display: flex;
@@ -29,6 +41,7 @@ main {
   align-items: center;
   width: 65vw;
   margin: 0 auto;
+  max-width: 950px;
 }
 section {
   width: 100%;
@@ -40,18 +53,17 @@ h2 {
   font-family: "Special Gothic", sans-serif;
   font-weight: 500;
 }
-/* iframe {
-  height: 600px;
-  width: 90%;
-  margin-top: 1rem;
-} */
+
 .pdf-viewer a {
   display: inline-block; /* This tells the link: "Only be as big as your contents" */
   width: 30%;
   line-height: 0; /* Removes the tiny ghost gap often found under images */
   border: 5px solid #2c2420;
-  padding: 0.25em;
+  padding: 0.2em;
   transition: border-color 0.37s linear;
+  min-width: 200px;
+  max-width: 400px;
+  cursor: pointer;
 }
 
 .pdf-viewer a:hover {
@@ -61,11 +73,15 @@ h2 {
 .pdf-viewer img {
   /* 100% of parent a */
   width: 100%;
-  height: auto !important;
+  height: auto;
   border: 2px solid #e0dbd3;
   box-shadow:
     0 1px 1px rgba(0, 0, 0, 0.1),
     0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.37s linear;
+}
+.pdf-viewer a:hover img {
+  opacity: 0.6; /* Lightens it (0.0 is invisible, 1.0 is full) */
 }
 
 .pdf-viewer {
@@ -87,7 +103,6 @@ h2 {
   color: #3b1d62;
   text-decoration: none;
   font-weight: 600;
-  /* text-shadow: 6px 0 9px rgba(174, 174, 174, 0.5); */
   transition: color 0.15s linear;
 }
 .nav-link:hover {
@@ -105,20 +120,8 @@ p {
   color: #2c2420;
 }
 
-.download-pdf {
-  color: #5f2f9d;
-  font-family: "Special Gothic", sans-serif;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.15s linear;
-}
-
-.download-pdf:hover {
-  color: #8c4eca;
-}
 footer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -139,21 +142,17 @@ footer a {
 footer a:hover {
   color: #5f2f9d;
 }
+.nav-link:focus-visible,
+.pdf-viewer a:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #5f2f9d;
+  outline-offset: 2px;
+}
 
 /* smaller screens - not mobile */
 @media (max-width: 800px) {
-  iframe {
-    height: 400px;
-  }
   svg {
     width: 26px;
     height: 26px;
-  }
-}
-
-/* mobile */
-@media (max-width: 480px) {
-  iframe {
-    display: none;
   }
 }
