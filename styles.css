@@ -40,11 +40,11 @@ h2 {
   font-family: "Special Gothic", sans-serif;
   font-weight: 500;
 }
-iframe {
+/* iframe {
   height: 600px;
   width: 90%;
   margin-top: 1rem;
-}
+} */
 #name-header {
   color: hsl(20, 15%, 12%);
   font-family: "Special Gothic", sans-serif;
