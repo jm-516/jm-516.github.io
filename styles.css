@@ -45,6 +45,37 @@ h2 {
   width: 90%;
   margin-top: 1rem;
 } */
+.pdf-viewer a {
+  display: inline-block; /* This tells the link: "Only be as big as your contents" */
+  width: 30%;
+  line-height: 0; /* Removes the tiny ghost gap often found under images */
+  border: 5px solid #2c2420;
+  padding: 0.25em;
+  transition: border-color 0.37s linear;
+}
+
+.pdf-viewer a:hover {
+  border: 5px solid #5f2f9d;
+}
+
+.pdf-viewer img {
+  /* 100% of parent a */
+  width: 100%;
+  height: auto !important;
+  border: 2px solid #e0dbd3;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
 #name-header {
   color: hsl(20, 15%, 12%);
   font-family: "Special Gothic", sans-serif;
@@ -56,7 +87,7 @@ h2 {
   color: #3b1d62;
   text-decoration: none;
   font-weight: 600;
-  text-shadow: 6px 0 9px rgba(174, 174, 174, 0.5);
+  /* text-shadow: 6px 0 9px rgba(174, 174, 174, 0.5); */
   transition: color 0.15s linear;
 }
 .nav-link:hover {
