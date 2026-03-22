@@ -135,11 +135,22 @@ p {
 
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
   margin: 1rem;
+  gap: 0.5rem;
+}
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.footer-text {
+  font-size: 0.8rem;
+  color: #2c2420;
+  margin: 0;
 }
 
 svg {
@@ -155,6 +166,7 @@ footer a {
 footer a:hover {
   color: #5f2f9d;
 }
+/* accesibility highlights */
 .nav-link:focus-visible,
 .pdf-viewer a:focus-visible,
 footer a:focus-visible {
