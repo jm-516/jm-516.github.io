@@ -18,46 +18,42 @@
       <h1 id="name-header">Jessica McColpin</h1>
     </header>
     <nav>
-      <!-- <a class="nav-link" href="#bio">Bio</a>
-    <a class="nav-link" href="#quickstart">Quickstart Guide</a>
-    <a class="nav-link" href="#sop">SOP</a>
-    <a class="nav-link" href="#tech-guide">Troubleshooting Guide</a> -->
+      <a class="nav-link" href="index.html#bio">Bio</a>
+      <a class="nav-link" href="index.html#quickstart">Quickstart Guide</a>
+      <a class="nav-link" href="index.html#sop">SOP</a>
+      <a class="nav-link" href="index.html#tech-guide">Troubleshooting Guide</a>
       <a class="nav-link" href="index.html">Home</a>
     </nav>
     <main>
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        class="contact-form"
-      >
+      <form action="https://api.web3forms.com/submit" method="POST">
         <input
           type="hidden"
           name="access_key"
           value="dd927935-8b35-42ec-9d14-95b2ee41ef12"
         />
-        <div class="contact-form small-field">
+
+        <div class="form-input">
           <label for="name">Full Name</label>
-          <input type="text" name="name" required />
+          <input type="text" id="name" name="name" required />
         </div>
-        <div class="contact-form small-field">
+
+        <div class="form-input">
           <label for="email">Email</label>
-          <input type="email" name="email" required />
+          <input type="email" id="email" name="email" required />
         </div>
-        <div class="contact-form">
+
+        <div class="form-input">
           <label for="message">Message</label>
-          <textarea name="message" required></textarea>
+          <textarea id="message" name="message" required></textarea>
         </div>
+
         <button type="submit">Submit</button>
       </form>
     </main>
     <footer>
       <div class="footer-icons">
         <!-- mail icon -->
-        <a
-          href="mailto:mcco.jessica@gmail.com"
-          aria-label="Send an email"
-          title="Send an email"
-        >
+        <a href="contact.html" aria-label="Contact me" title="Contact me">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
