@@ -4,4 +4,4 @@ A personal portfolio showcasing my technical writing work, including a quick sta
 
 Built with: HTML, CSS, Visual Studio Code, Git
 
-Live site: https://jm-516.github.io/
+Live site: jessicawriting.com
